@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:wibuplex_app/blocs/app_cubit.dart';
 import 'package:wibuplex_app/common/app_colors.dart';
 import 'package:wibuplex_app/common/app_images.dart';
+import 'package:wibuplex_app/common/app_lotties.dart';
 import 'package:wibuplex_app/repositories/auth_repository.dart';
 import 'package:wibuplex_app/ui/pages/splash/splash_navigator.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -47,11 +49,24 @@ class _SplashChildPageState extends State<SplashChildPage> {
     return Scaffold(
       body: Stack(
         children: [
-          Positioned.fill(child: Container(color: AppColors.primary)),
+          Positioned.fill(child: Container(color: Colors.white)),
           Center(
-            child: Image.asset(
-              AppImages.icLogoTransparent,
-              width: 200,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Image.asset(
+                  AppImages.icLogoTransparent,
+                  width: 200,
+                ),
+                const SizedBox(
+                  height: 100,
+                ),
+                Lottie.asset(
+                  AppLotties.loading,
+                  height: 100,
+                  width: 100,
+                ),
+              ],
             ),
           ),
         ],
