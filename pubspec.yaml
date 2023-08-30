@@ -72,6 +72,9 @@ dependencies:
   #Dialog, etc
   cached_network_image: ^3.2.3
 
+  #Lottie
+  lottie: ^2.3.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -115,7 +118,7 @@ flutter:
     - assets/images/ic_eye_close.png
     - assets/images/ic_eye_open.png
     - assets/images/ic_eye_open.png
-
+    - assets/lotties/
   fonts:
     - family: Arimo
       fonts:
