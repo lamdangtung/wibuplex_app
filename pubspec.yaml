@@ -72,6 +72,9 @@ dependencies:
   #Dialog, etc
   cached_network_image: ^3.2.3
 
+  #Loading
+  flutter_spinkit: ^5.2.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -107,14 +110,8 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/vectors/
-    - assets/images/bg_image_placeholder.png
-    - assets/images/ic_logo_transparent.png
-    - assets/images/ic_back.png
-    - assets/images/ic_white_back.png
-    - assets/images/ic_avatar.png
-    - assets/images/ic_eye_close.png
-    - assets/images/ic_eye_open.png
-    - assets/images/ic_eye_open.png
+    - assets/images/
+    - assets/fonts/
 
   fonts:
     - family: Arimo

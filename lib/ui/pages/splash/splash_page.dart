@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:wibuplex_app/blocs/app_cubit.dart';
 import 'package:wibuplex_app/common/app_colors.dart';
 import 'package:wibuplex_app/common/app_images.dart';
@@ -45,16 +46,31 @@ class _SplashChildPageState extends State<SplashChildPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          Positioned.fill(child: Container(color: AppColors.primary)),
-          Center(
-            child: Image.asset(
-              AppImages.icLogoTransparent,
-              width: 200,
+      body: SafeArea(
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            Positioned.fill(child: Container(color: Colors.white)),
+            Center(
+              child: Image.asset(
+                AppImages.icLogo,
+                width: 200,
+              ),
             ),
-          ),
-        ],
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                margin: const EdgeInsets.only(bottom: 60),
+                height: 100,
+                width: 100,
+                child: const SpinKitCircle(
+                  color: AppColors.blueBackground,
+                  size: 60.0,
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

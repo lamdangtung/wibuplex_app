@@ -43,4 +43,7 @@ class AppColors {
 
   ///BottomNavigationBar
   static const Color bottomNavigationBar = Color(0xFF919191);
+
+  /// Background
+  static const Color blueBackground = Color(0xFF0085FF);
 }
